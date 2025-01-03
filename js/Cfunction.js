@@ -1320,7 +1320,16 @@ CheckAutoSun = function(a) {
 	}, deleteCookie = function(a) {
 		document.cookie = a + "=0;"
 	}, WordUTF8 =
-	'<div id="dLogo" style="position:absolute;width:900px;height:600px;background:#000 url(../images/Logo.jpg) no-repeat;z-index:1"><span style="position:absolute;line-height:1.5;left:349px;top:10px;width:524px;text-align:right;font-size:15pt; font-family:&#x9ED1;&#x4F53;;color:#F60; top:32px">&#x6B22;&#x8FCE;&#x6765;&#x5230;<span style="font-family:Verdana">JavaScript</span>&#x7248;&#x690D;&#x7269;&#x5927;&#x6218;&#x50F5;&#x5C38;<br></span><div id="LogoWord" style="position:absolute;color:#FF0;top:510px;width:100%;height:90px"><span style="position:absolute;font-size:15pt;width:321px;height:69px; font-family:&#x9ED1;&#x4F53;;line-height:69px; left:60px; top:10px;cursor:pointer;background:url(./images/interface/LogoLine.png) no-repeat center -5px;text-align:center" onclick="SetBlock($(\'dSurface\'),$(\'iSurfaceBackground\'))">&#x70B9;&#x51FB;&#x5F00;&#x59CB;<span style="font-size:15pt; font-family:Verdana;color:#FF0;cursor:pointer;">JavaScript</span>&#x7248;&#x3002;&#x3002;&#x3002;</span><span style="position:absolute;font-size:11pt;left:407px;top:29px;line-height:1.5;font-weight:bold"><span style="cursor:pointer;"><span id="sTime"></span></span><br> </span></div></div>',
+	'<div id="dLogo" style="position:absolute;width:900px;height:600px;background:#000 url(../images/Logo.jpg) no-repeat;z-index:1">' +
+	'<span style="position:absolute;line-height:1.5;left:349px;top:10px;width:524px;text-align:right;font-size:15pt; font-family:&#x9ED1;&#x4F53;;color:#F60; top:32px">&#x6B22;&#x8FCE;&#x6765;&#x5230;' +
+	'<span style="font-family:Verdana">JavaScript</span>&#x7248;&#x690D;&#x7269;&#x5927;&#x6218;&#x50F5;&#x5C38;<br></span>' +
+	'<div id="LogoWord" style="position:absolute;color:#FF0;top:510px;width:100%;height:90px">' +
+	'<span style="position:absolute;font-size:15pt;width:321px;height:69px; font-family:&#x9ED1;&#x4F53;;line-height:69px; left:60px; top:10px;cursor:pointer;background:url(../images/interface/LogoLine.png) no-repeat center -5px;text-align:center" onclick="SetBlock($(\'dSurface\'),$(\'iSurfaceBackground\'))">&#x70B9;&#x51FB;&#x5F00;&#x59CB;' +
+	'<span style="font-size:15pt; font-family:Verdana;color:#FF0;cursor:pointer;">JavaScript</span>&#x7248;&#x3002;&#x3002;&#x3002;</span><span style="position:absolute;font-size:11pt;left:407px;top:29px;line-height:1.5;font-weight:bold"><span style="cursor:pointer;" onclick="SetBlock($(\'dProcess\'))">&#x70B9;&#x51FB;&#x67E5;&#x770B;&#x66F4;&#x65B0;&#x8FDB;&#x5EA6;&#x5217;&#x8868;!<span id="sTime"></span></span>' +
+	'<br> ' +
+	'</span>' +
+	'</div>' +
+	'</div>',
 	SelectModal = function(g) {
 		var b = oS.GlobalVariables,
 			c = oS.LvlVariables,
