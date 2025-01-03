@@ -131,7 +131,7 @@ var $User = function() {
 			}!this.PicArr && (this.PicArr = []);
 			!this.PName && (this.PName = []);
 			!this.ZName && (this.ZName = []);
-			!this.backgroundImage && (this.backgroundImage = "/game/zombie/images/interface/background1.jpg");
+			!this.backgroundImage && (this.backgroundImage = "./images/interface/background1.jpg");
 			!this.LF && (this.LF = [0, 1, 1, 1, 1, 1]);
 			!this.ZF && (this.ZF = this.LF);
 			!this.LargeWaveFlag && (this.LargeWaveFlag = {});
@@ -205,7 +205,7 @@ var $User = function() {
 						h = oGd.$LM;
 					while (--f) {
 						h[f] = 1;
-						NewImg("LawnMower" + f, "/game/zombie/images/LawnMower.gif", "left:" + oS.LawnMowerX + "px;top:" + (GetY(f) - 60) +
+						NewImg("LawnMower" + f, "./images/LawnMower.gif", "left:" + oS.LawnMowerX + "px;top:" + (GetY(f) - 60) +
 							"px;z-index:" + (3 * f + 2), EDAll)
 					}
 				})
@@ -318,7 +318,7 @@ var $User = function() {
 				delete c.LF;
 				delete c.ZF;
 				(c.LoadAccess || function() {
-					NewImg("imgGrowSoil", "/game/zombie/images/interface/GrowSoil.png", "display:none;z-index:50", EDAll);
+					NewImg("imgGrowSoil", "./images/interface/GrowSoil.png", "display:none;z-index:50", EDAll);
 					NewEle("dTitle", "div", 0, 0, EDAll);
 					innerText(ESSunNum, c.SunNum);
 					SetStyle($("tGround"), {
@@ -497,10 +497,10 @@ var $User = function() {
 				l = e.ChangeC,
 				b = oZ.getZ(q, g, a);
 			n < 1 && f[g + "_" + c] && l != c && ((e.Kind = ++n) && (h = e.Attack = 40), e.ChangeC = c, k.src =
-				"/game/zombie/images/Plants/PB" + n + a + ".gif");
+				"./images/Plants/PB" + n + a + ".gif");
 			b && b.Altitude == 1 ? (b.getHurt(-1, a, h, n, 0, 0, 0), m.splice(j, 1), (SetStyle(k, {
 					left: e.pixelLeft + 28 + "px"
-				})).src = "/game/zombie/images/Plants/PeaBulletHit.gif", oSym.addTask(10, ClearChild, [k])) : (e.X += (p = !a ? 5 : -5)) < oS.W &&
+				})).src = "./images/Plants/PeaBulletHit.gif", oSym.addTask(10, ClearChild, [k])) : (e.X += (p = !a ? 5 : -5)) < oS.W &&
 				e.X > 100 ? k.style.left = (e.pixelLeft += p) + "px" : (m.splice(j, 1), ClearChild(k))
 		},
 		MB2: function(d, g, h) {
@@ -512,7 +512,7 @@ var $User = function() {
 				e = $(c);
 			b && b.Altitude == 1 ? (b.getHurt(-1, 0, 20, 0, 0, 0, 0), h.splice(g, 1), (SetStyle(e, {
 					left: d.pixelLeft + 38 + "px"
-				})).src = "/game/zombie/images/Plants/ShroomBulletHit.gif", oSym.addTask(10, ClearChild, [e])) : (d.X += 5) < oS.W ? e.style.left =
+				})).src = "./images/Plants/ShroomBulletHit.gif", oSym.addTask(10, ClearChild, [e])) : (d.X += 5) < oS.W ? e.style.left =
 				(d.pixelLeft += 5) + "px" : (h.splice(g, 1), ClearChild(e))
 		},
 		MB3: function(g, d, a) {
@@ -1109,7 +1109,7 @@ var $User = function() {
 		b && SetAlpha($(b).childNodes[1], 100, 1)
 	},
 	ChoseShovel = function(a) {
-		WhichMouseButton(a) < 2 && (SetNone($("imgShovel")), NewImg("tShovel", "/game/zombie/images/interface/Shovel.png", "left:" + (a.clientX -
+		WhichMouseButton(a) < 2 && (SetNone($("imgShovel")), NewImg("tShovel", "./images/interface/Shovel.png", "left:" + (a.clientX -
 			10) + "px;top:" + (a.clientY + document.body.scrollTop - 17) + "px;z-index:1", EDAll), oS.Chose = -1, StopBubble(a))
 	},
 	StopBubble = function(a) {
@@ -1158,7 +1158,7 @@ var $User = function() {
 			left: h,
 			top: d
 		};
-		NewImg(g, "/game/zombie/images/Sun.gif", c, EDAll, {
+		NewImg(g, "./images/Sun.gif", c, EDAll, {
 			onclick: function() {
 				ClickSun(this.id)
 			}
@@ -1206,7 +1206,7 @@ var $User = function() {
 		}
 	},
 	ShowLargeWave = function(a) {
-		NewImg("LargeWave", "/game/zombie/images/LargeWave.gif", "left:71px;top:249px;width:858px;height:102px;z-index:50", EDAll);
+		NewImg("LargeWave", "./images/LargeWave.gif", "left:71px;top:249px;width:858px;height:102px;z-index:50", EDAll);
 		oSym.addTask(4, function(b, c, d) {
 			SetStyle($("LargeWave"), {
 				width: (b -= 57.2) + "px",
@@ -1221,7 +1221,7 @@ var $User = function() {
 	},
 	ShowFinalWave = function() {
 		var a = function(b) {
-			NewImg("FinalWave", "/game/zombie/images/FinalWave.gif", "left:122px;top:194px;width:756px;height:213px;z-index:50", EDAll);
+			NewImg("FinalWave", "./images/FinalWave.gif", "left:122px;top:194px;width:756px;height:213px;z-index:50", EDAll);
 			oSym.addTask(4, function(c, e, d) {
 				SetStyle($("FinalWave"), {
 					width: (c -= 50.4) + "px",
@@ -1254,14 +1254,14 @@ var $User = function() {
 		})()
 	},
 	GameOver = function() {
-		NewImg("iGameOver", "/game/zombie/images/ZombiesWon.png", "width:900px;height:600px;z-index:255", EDAll, {
+		NewImg("iGameOver", "./images/ZombiesWon.png", "width:900px;height:600px;z-index:255", EDAll, {
 			onclick: function() {
 				SelectModal(oS.Lvl)
 			}
 		})
 	},
 	PrepareGrowPlants = function(a) {
-		NewImg("PrepareGrow", "/game/zombie/images/PrepareGrowPlants.gif" + $Random + Math.random(), "z-index:50;left:" + (oS.W * 0.5 - 77) +
+		NewImg("PrepareGrow", "./images/PrepareGrowPlants.gif" + $Random + Math.random(), "z-index:50;left:" + (oS.W * 0.5 - 77) +
 			"px;top:" + (oS.H * 0.5 - 54) + "px", EDAll);
 		oSym.addTask(250, function(b) {
 			ClearChild($("PrepareGrow"));
@@ -1320,7 +1320,7 @@ CheckAutoSun = function(a) {
 	}, deleteCookie = function(a) {
 		document.cookie = a + "=0;"
 	}, WordUTF8 =
-	'<div id="dLogo" style="position:absolute;width:900px;height:600px;background:#000 url(/game/zombie/images/Logo.jpg) no-repeat;z-index:1"><span style="position:absolute;line-height:1.5;left:349px;top:10px;width:524px;text-align:right;font-size:15pt; font-family:&#x9ED1;&#x4F53;;color:#F60; top:32px">&#x6B22;&#x8FCE;&#x6765;&#x5230;<span style="font-family:Verdana">JavaScript</span>&#x7248;&#x690D;&#x7269;&#x5927;&#x6218;&#x50F5;&#x5C38;<br></span><div id="LogoWord" style="position:absolute;color:#FF0;top:510px;width:100%;height:90px"><span style="position:absolute;font-size:15pt;width:321px;height:69px; font-family:&#x9ED1;&#x4F53;;line-height:69px; left:60px; top:10px;cursor:pointer;background:url(/game/zombie/images/interface/LogoLine.png) no-repeat center -5px;text-align:center" onclick="SetBlock($(\'dSurface\'),$(\'iSurfaceBackground\'))">&#x70B9;&#x51FB;&#x5F00;&#x59CB;<span style="font-size:15pt; font-family:Verdana;color:#FF0;cursor:pointer;">JavaScript</span>&#x7248;&#x3002;&#x3002;&#x3002;</span><span style="position:absolute;font-size:11pt;left:407px;top:29px;line-height:1.5;font-weight:bold"><span style="cursor:pointer;" onclick="SetBlock($(\'dProcess\'))">&#x70B9;&#x51FB;&#x67E5;&#x770B;&#x66F4;&#x65B0;&#x8FDB;&#x5EA6;&#x5217;&#x8868;!<span id="sTime"></span></span><br> </span></div></div>',
+	'<div id="dLogo" style="position:absolute;width:900px;height:600px;background:#000 url(./images/Logo.jpg) no-repeat;z-index:1"><span style="position:absolute;line-height:1.5;left:349px;top:10px;width:524px;text-align:right;font-size:15pt; font-family:&#x9ED1;&#x4F53;;color:#F60; top:32px">&#x6B22;&#x8FCE;&#x6765;&#x5230;<span style="font-family:Verdana">JavaScript</span>&#x7248;&#x690D;&#x7269;&#x5927;&#x6218;&#x50F5;&#x5C38;<br></span><div id="LogoWord" style="position:absolute;color:#FF0;top:510px;width:100%;height:90px"><span style="position:absolute;font-size:15pt;width:321px;height:69px; font-family:&#x9ED1;&#x4F53;;line-height:69px; left:60px; top:10px;cursor:pointer;background:url(./images/interface/LogoLine.png) no-repeat center -5px;text-align:center" onclick="SetBlock($(\'dSurface\'),$(\'iSurfaceBackground\'))">&#x70B9;&#x51FB;&#x5F00;&#x59CB;<span style="font-size:15pt; font-family:Verdana;color:#FF0;cursor:pointer;">JavaScript</span>&#x7248;&#x3002;&#x3002;&#x3002;</span><span style="position:absolute;font-size:11pt;left:407px;top:29px;line-height:1.5;font-weight:bold"><span style="cursor:pointer;" onclick="SetBlock($(\'dProcess\'))">&#x70B9;&#x51FB;&#x67E5;&#x770B;&#x66F4;&#x65B0;&#x8FDB;&#x5EA6;&#x5217;&#x8868;!<span id="sTime"></span></span><br> </span></div></div>',
 	SelectModal = function(g) {
 		var b = oS.GlobalVariables,
 			c = oS.LvlVariables,
@@ -1424,7 +1424,7 @@ CheckAutoSun = function(a) {
 		a.onerror = function() {
 			ClearChild(this)
 		};
-		a.src = "/game/zombie/js/Process.js"
+		a.src = "./js/Process.js"
 	}, $ = function(a) {
 		return document.getElementById(a)
 	}, $n = function(a) {
